@@ -129,15 +129,15 @@ Describing VPC design
 ```
 ## 🛡️ NETWORK & SECURITY
 #### <ins> Route Table.</ins>
--Public Route Table (cloudstatic-public-rt) → Associated with Public Subnet.
-   -Route: 0.0.0.0/0 → IGW. <br>
--Private Route Table (cloudstatic-private-rt) → Associated with App Subnet.<br>
--DB Route Table (cloudstatic-db-rt) → Associated with DB Subnet. <br>
+-  Public Route Table (cloudstatic-public-rt) → Associated with Public Subnet.
+    - Route: 0.0.0.0/0 → IGW. <br>
+-  Private Route Table (cloudstatic-private-rt) → Associated with App Subnet.<br>
+-  DB Route Table (cloudstatic-db-rt) → Associated with DB Subnet. <br>
 ❌ No internet access to Private Route Table & DB Route Table
 
 #### <ins> Security Groups. </ins>
--Cloudstatic-app-sg → Allow HTTP (80) from within VPC main CIDR
--Cloudstatic-db-sg → Allow MySQL (3306) only from App Subnet.
+-  Cloudstatic-app-sg → Allow HTTP (80) from within VPC main CIDR
+-  Cloudstatic-db-sg → Allow MySQL (3306) only from App Subnet.
 
 ---
 ### 🔗 URLS
