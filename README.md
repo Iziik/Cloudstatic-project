@@ -146,8 +146,3 @@ Describing VPC design
 
 -  Cloudfront URL:
    -   d1o7ukoex2422u.cloudfront.net
-
-Console Details
--  Sign-in Url: https://eloud419.signin.aws.amazon.com/console
--  User name: cloudstaticc-User
--  Password: abc123!!
