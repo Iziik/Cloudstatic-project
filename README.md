@@ -126,7 +126,7 @@ Describing VPC design
    -Route: 0.0.0.0/0 → IGW. <br>
 -Private Route Table (cloudstatic-private-rt) → Associated with App Subnet.<br>
 -DB Route Table (cloudstatic-db-rt) → Associated with DB Subnet. <br>
-No internet access to Private Route Table & DB Route Table
+❌ No internet access to Private Route Table & DB Route Table
 
 #### <ins> Security Groups. </ins>
 -Cloudstatic-app-sg → Allow HTTP (80) from within VPC main CIDR
@@ -135,6 +135,7 @@ No internet access to Private Route Table & DB Route Table
 ---
 ### 🔗 URLS
 -S3 Website URL:
-   - https://cloudstatic-assignment.s3.eu-west-2.amazonaws.com/index.html
+   - https://cloudstatic-assignment.s3.eu-west-2.amazonaws.com/index.html.
+
 -Cloudfront URL:
    - d1o7ukoex2422u.cloudfront.net
