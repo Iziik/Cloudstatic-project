@@ -17,7 +17,7 @@ Cloudstatic-project/
 │   ├── s3-policy.json      
 │   ├── vpc-readonly-policy.json  
 
-│── screenshots/ 
+│── Urls
 
 ---
 
@@ -49,9 +49,9 @@ Cloudstatic-project/
 }
 ```
 ### 📦 CLOUDFRONT
--The distribution was created with Cloudstatic-assignment endpoint as the origin.
--Enabled HTTP → HTTPS redirection.
--Attached a Custom SSL certificate.
+- The distribution was created with Cloudstatic-assignment endpoint as the origin.
+- Enabled HTTP → HTTPS redirection.
+- Attached a Custom SSL certificate.
 
 ---
 ### 📋 IAM User & POLICIES
@@ -69,6 +69,11 @@ Describing **ACTIONS** for the buckets
 {
     "Version": "2012-10-17",
     "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "s3:ListAllMyBuckets",
+            "Resource": "arn:aws:s3:::*"
+        },
         {
             "Effect": "Allow",
             "Action": "s3:ListBucket",
@@ -108,12 +113,14 @@ Describing VPC design
     "Version": "2012-10-17",
     "Statement": [
         {
-            "Effect": "Allow",
+           "Effect": "Allow",
             "Action": [
                 "ec2:DescribeVpcs",
+                "ec2:DescribeVpcAttribute",
                 "ec2:DescribeSubnets",
                 "ec2:DescribeRouteTables",
-                "ec2:DescribeSecurityGroups"
+                "ec2:DescribeSecurityGroups",
+                "ec2:DescribeSecurityGroupRules"
             ],
             "Resource": "*"
         }
@@ -134,8 +141,13 @@ Describing VPC design
 
 ---
 ### 🔗 URLS
--S3 Website URL:
-   - https://cloudstatic-assignment.s3.eu-west-2.amazonaws.com/index.html.
+-  S3 Website URL:
+   -  https://cloudstatic-assignment.s3.eu-west-2.amazonaws.com/index.html.
 
--Cloudfront URL:
-   - d1o7ukoex2422u.cloudfront.net
+-  Cloudfront URL:
+   -   d1o7ukoex2422u.cloudfront.net
+
+Console Details
+-  Sign-in Url: https://eloud419.signin.aws.amazon.com/console
+-  User name: cloudstaticc-User
+-  Password: abc123!!
